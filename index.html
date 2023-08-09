@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi Login</title>
+    <link rel="shortcut icon" href="./assets/images/favicon-32x32.png"      type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?      family=Josefin+Sans:ital,wght@1,300&family=Kumbh+Sans:wght@100;200;300;400;500;600;700;800&family=Poppins:wght@400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu:ital,wght @0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="main-container">
+
+        <div class="selection">
+
+            <div class="steps">
+                <button type="button" class="steps-btn js-btn-selection" id="one">1</button>
+                <div class="steps-info">
+                    <p class="step-num">STEP 1</p>
+                    <p class="step-info">YOUR INFO</p>
+                </div>
+            </div>
+
+            <div class="steps">
+                <button type="button" class="steps-btn js-btn-selection btn-2" id="two">2</button>
+                <div class="steps-info">
+                    <p class="step-num">STEP 2</p>
+                    <p class="step-info">SELECT PLAN</p>
+                </div>
+            </div>
+
+            <div class="steps">
+                <button type="button" class="steps-btn js-btn-selection btn-3" id="three">3</button>
+                <div class="steps-info">
+                    <p class="step-num">STEP 3</p>
+                    <p class="step-info">ADD-ONS</p>
+                </div>
+            </div>
+
+            <div class="steps">
+                <button type="button" class="steps-btn js-btn-selection btn-4" id="four">4</button>
+                <div class="steps-info">
+                    <p class="step-num">STEP 4</p>
+                    <p class="step-info">SUMMARY</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="selection-display">
+
+            <div class="personal-info js-personal-info">
+                <h2 class="personal-info-header">Personal info</h2>
+                <p class="personal-info-instructions">Please provie your name, email address, and phone number.</p>
+
+                <div class="input-field">
+                    <div class="label-and-error">
+                        <p class="name-label">Name</p>
+                        <p class="error-label js-name-error" id="name-error"></p>
+                    </div>
+                    <input type="text" placeholder="e.g myingineer" class="name-field js-name-input">
+                </div>
+
+                <div class="input-field">
+                    <div class="label-and-error">
+                        <p class="name-label">Email Address</p>
+                        <p class="error-label js-email-error"></p>
+                    </div>
+                    <input type="email" placeholder="e.g myingineer@nupatafrica.com" class="name-field js-email-input">
+                </div>
+
+                <div class="input-field">
+                    <div class="label-and-error">
+                        <p class="name-label">Phone Number</p>
+                        <p class="error-label js-phone-error"></p>
+                    </div>
+                    <input type="tel" placeholder="e.g +234 1234567890" maxlength="14" class="name-field js-phone-number-input">
+                </div>
+            </div>
+
+
+            <div class="monthly-and-yearly-billing-container">
+                <div class="monthly-billing-plan js-monthly-billing-plan">
+                    <h2 class="monthly-billing-header">Select your plan</h2>
+                    <p class="monthly-billing-info">Your have the option of monthly or yearly billing.</p>
+    
+                    <div class="per-month-plans">
+    
+                        <div class="monthly-plan-selection js-monthly-plan-1">
+                            <img src="./assets/images/icon-arcade.svg" alt="arcade-icon">
+                            <h4 class="monthly-plan-name">Arcade</h4>
+                            <p class="monthly-plan-price">$9/mo</p>
+                        </div>
+    
+                        <div class="monthly-plan-selection js-monthly-plan-2">
+                            <img src="./assets/images/icon-advanced.svg" alt="advanced-icon">
+                            <h4 class="monthly-plan-name">Advanced</h4>
+                            <p class="monthly-plan-price">$12/mo</p>
+                        </div>
+    
+                        <div class="monthly-plan-selection js-monthly-plan-3">
+                            <img src="./assets/images/icon-pro.svg" alt="pro-icon">
+                            <h4 class="monthly-plan-name">Pro</h4>
+                            <p class="monthly-plan-price">$15/mo</p>
+                        </div>
+    
+    
+                    </div>
+    
+                </div>
+    
+    
+                <div class="yearly-billing-plan js-yearly-billing-plan">
+                    <h2 class="yearly-billing-header">Select your plan</h2>
+                    <p class="yearly-billing-info">Your have the option of monthly or yearly billing.</p>
+    
+                    <div class="per-year-plans">
+    
+                        <div class="yearly-plan-selection">
+                            <img src="./assets/images/icon-arcade.svg" alt="arcade-icon">
+                            <h4 class="yearly-plan-name">Arcade</h4>
+                            <p class="yearly-plan-price">$90/yr</p>
+                            <p class="yearly-free-gift">2 months free</p>
+                        </div>
+    
+                        <div class="yearly-plan-selection">
+                            <img src="./assets/images/icon-advanced.svg" alt="advanced-icon">
+                            <h4 class="yearly-plan-name">Advanced</h4>
+                            <p class="yearly-plan-price">$120/yr</p>
+                            <p class="yearly-free-gift">2 months free</p>
+                        </div>
+    
+                        <div class="yearly-plan-selection">
+                            <img src="./assets/images/icon-pro.svg" alt="pro-icon">
+                            <h4 class="yearly-plan-name">Pro</h4>
+                            <p class="yearly-plan-price">$150/yr</p>
+                            <p class="yearly-free-gift">2 months free</p>
+                        </div>
+    
+    
+                    </div>
+    
+
+                </div>
+
+                <div class="toggle-btn-bg js-toggle-btn">
+                    <div class="toggle-btn">
+                        <h5 class="month js-month">Monthly</h5>
+                        <label class="switch">
+                            <input type="checkbox" id="toggle">
+                            <span class="slider"></span>
+                        </label>
+                        <h5 class="year js-year">Yearly</h5>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="monthly-pick-ons js-monthly-pick-ons">
+                <h2 class="monthly-pick-ons-header">
+                    Pick add-ons
+                </h2>
+                <p class="monthly-pick-ons-info">
+                    Add-ons help enhance your gaming experience.
+                </p>
+
+                <div class="checkbox-container">
+                    
+                    <div class="checkbox-extras">
+                        <div class="checkbox-align">
+                            <input type="checkbox">
+                            <div class="checkbox-info">
+                                <p class="checkbox-info-head">Online service</p>
+                                <p class="checkbox-info-text">Access to multiplayer games</p>
+                            </div>
+                        </div>
+                        <p class="checkbox-extra-fee">+$1/mo</p>
+                    </div>
+
+                    <div class="checkbox-extras">
+                        <div class="checkbox-align">
+                            <input type="checkbox">
+                            <div class="checkbox-info">
+                                <p class="checkbox-info-head">Larger Storage</p>
+                                <p class="checkbox-info-text">Extra 1TB of cloud space</p>
+                            </div>
+                        </div>
+                        <p class="checkbox-extra-fee">+$2/mo</p>
+                    </div>
+
+                    <div class="checkbox-extras">
+                        <div class="checkbox-align">
+                            <input type="checkbox">
+                            <div class="checkbox-info">
+                                <p class="checkbox-info-head">Customizable profile</p>
+                                <p class="checkbox-info-text">Custom theme on your profile</p>
+                            </div>
+                        </div>
+                        <p class="checkbox-extra-fee">+$2/mo</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="yearly-pick-ons">
+                <h2 class="yearly-pick-ons-header">
+                    Pick add-ons
+                </h2>
+                <p class="yearly-pick-ons-info">
+                    Add-ons help enhance your gaming experience.
+                </p>
+
+                <div class="checkbox-container">
+                    
+                    <div class="checkbox-extras">
+                        <div class="checkbox-align">
+                            <input type="checkbox">
+                            <div class="checkbox-info">
+                                <p class="checkbox-info-head">Online service</p>
+                                <p class="checkbox-info-text">Access to multiplayer games</p>
+                            </div>
+                        </div>
+                        <p class="checkbox-extra-fee">+$10/yr</p>
+                    </div>
+
+                    <div class="checkbox-extras">
+                        <div class="checkbox-align">
+                            <input type="checkbox">
+                            <div class="checkbox-info">
+                                <p class="checkbox-info-head">Larger Storage</p>
+                                <p class="checkbox-info-text">Extra 1TB of cloud space</p>
+                            </div>
+                        </div>
+                        <p class="checkbox-extra-fee">+$20/yr</p>
+                    </div>
+
+                    <div class="checkbox-extras">
+                        <div class="checkbox-align">
+                            <input type="checkbox">
+                            <div class="checkbox-info">
+                                <p class="checkbox-info-head">Customizable profile</p>
+                                <p class="checkbox-info-text">Custom theme on your profile</p>
+                            </div>
+                        </div>
+                        <p class="checkbox-extra-fee">+$20/yr</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="monthly-finishing-up js-monthly-finishing-up">
+                <h2 class="monthly-finishing-up-head">Finishing up</h2>
+                <p class="monthly-finishing-up-info">Double-check everything looks OK before confirming</p>
+
+                <div class="selected-plan-review">
+
+                    <div class="selected-head">
+                        <div class="selected-head-selection">
+                            <h4 class="selected-plan">Arcade (Monthly)</h4>
+                            <a href="#" class="change">Change</a>
+                        </div>
+                        <h5>$9/mo</h5>
+                    </div>
+                    <p class="border"></p>
+
+                    <div class="picked-plan">
+                        <p class="picked-plan-name">Online Service</p>
+                        <p class="picked-plan-price">+$1/mo</p>
+                    </div>
+
+                    <div class="picked-plan">
+                        <p class="picked-plan-name">Larger Storage</p>
+                        <p class="picked-plan-price">+$2/mo</p>
+                    </div>
+
+                </div>
+
+                <div class="total-price">
+                    <p class="total-info">Total (per <span>month</span>)</p>
+                    <p class="total-fee">+$12/mo</p>
+                </div>
+
+            </div>
+
+            <div class="yearly-finishing-up">
+                <h2 class="yearly-finishing-up-head">Finishing up</h2>
+                <p class="yearly-finishing-up-info">Double-check everything looks OK before confirming</p>
+
+                <div class="selected-plan-review">
+
+                    <div class="selected-head">
+                        <div class="selected-head-selection">
+                            <h4 class="selected-plan">Arcade (Yearly)</h4>
+                            <a href="#" class="change">Change</a>
+                        </div>
+                        <h5>$90/yr</h5>
+                    </div>
+                    <p class="border"></p>
+
+                    <div class="picked-plan">
+                        <p class="picked-plan-name">Online Service</p>
+                        <p class="picked-plan-price">+$10/yr</p>
+                    </div>
+
+                    <div class="picked-plan">
+                        <p class="picked-plan-name">Larger Storage</p>
+                        <p class="picked-plan-price">+$20/yr</p>
+                    </div>
+
+                </div>
+
+                <div class="total-price">
+                    <p class="total-info">Total (per year)</p>
+                    <p class="total-fee">+$120/yr</p>
+                </div>
+
+            </div>
+
+
+            <div class="thank-you">
+                <img class="thank-you-logo" src="./assets/images/icon-thank-you.svg" alt="thankyou">
+                <h2 class="thank-you-head">Thank You!</h2>
+                <p class="thank-you-info"> 
+                    Thanks for confirming your subscription! We hope you have fun 
+                    using our platform. If you ever need support, please feel free 
+                    to email us at support@nupatafrica.com
+                </p>
+            </div>
+
+
+            <div class="btn-and-go-back">
+                <a class="go-back" href="#">Go back</a>
+                <button type="button" class="submit-btn js-submit-btn">Next Step</button>
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>

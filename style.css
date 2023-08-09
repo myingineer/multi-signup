@@ -1,0 +1,510 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: hsl(217, 100%, 97%);
+    /* border: 1px solid black; */
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 16px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+.main-container {
+    /* border: 2px solid saddlebrown; */
+    margin: 1rem;
+    background-color: white;
+    display: flex;
+}
+
+.selection {
+    background-image: url(./assets/images/bg-sidebar-desktop.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 45%;
+    padding: 5rem 3rem;
+    margin: 20px;
+    border-radius: 8px;
+}
+
+.steps {
+    /* border: 1px solid purple; */
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    margin-bottom: 25px;
+    align-items: center;
+}
+
+.steps .steps-btn {
+    border: 0.5px solid hsl(217, 100%, 97%);
+    border-radius: 100%;
+    font-weight: 700;
+    height: 40px;
+    width: 40px;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+}
+
+.steps .steps-btn.clicked{
+    background-color: hsl(206, 94%, 87%);
+}
+
+.steps .steps-btn:active {
+    transform: scale(0.9);
+}
+
+.steps-info .step-num {
+    font-size: 12px;
+    font-weight: 400;
+    color: hsla(206, 94%, 87%, 0.877);
+}
+
+.steps-info .step-info {
+    font-weight: 700;
+    color: white;
+    font-size: 14px;
+}
+
+.selection-display {
+    /* border: 1px solid saddlebrown; */
+    padding: 2rem;
+    max-width: 55%;
+}
+
+.personal-info {
+    padding: 2rem;
+    display: none;
+}
+
+.personal-info .personal-info-header,
+.monthly-billing-plan .monthly-billing-header,
+.yearly-billing-plan .yearly-billing-header,
+.monthly-pick-ons .monthly-pick-ons-header,
+.yearly-pick-ons .yearly-pick-ons-header,
+.monthly-finishing-up .monthly-finishing-up-head,
+.yearly-finishing-up .yearly-finishing-up-head {
+    font-weight: 700;
+    color: hsl(213, 96%, 18%);
+    margin-bottom: 0.5rem;
+}
+
+.personal-info .personal-info-instructions,
+.monthly-billing-plan .monthly-billing-info,
+.yearly-billing-plan .yearly-billing-info,
+.monthly-pick-ons .monthly-pick-ons-info,
+.yearly-pick-ons .yearly-pick-ons-info,
+.monthly-finishing-up .monthly-finishing-up-info,
+.yearly-finishing-up .yearly-finishing-up-info {
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+    color: hsl(231, 11%, 63%);
+}
+
+.input-field .label-and-error {
+    display: flex;
+    /* border: 1px solid saddlebrown; */
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.label-and-error .name-label {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: hsl(213, 96%, 18%);
+}
+
+
+
+.label-and-error .error-label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: hsl(354, 84%, 57%);
+    display: none;
+}
+
+.input-field .name-field {
+    width: 100%;
+    height: 40px;
+    text-indent: 15px;
+    border: 1px solid hsl(217, 100%, 97%);
+    border-radius: 8px;
+    outline: none;
+    cursor: pointer;
+}
+
+.input-field .name-field:focus {
+    border: 2px solid hsl(243, 100%, 62%);
+}
+
+.btn-and-go-back {
+    /* border: 1px solid saddlebrown; */
+    /* display: flex; */
+    margin-top: 80px;
+}
+
+.btn-and-go-back .submit-btn {
+    float: right;
+    width: 150px;
+    height: 40px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 500;
+    color: white;
+    background-color: hsl(213, 96%, 18%);
+    cursor: pointer;
+    display: none;
+}
+
+.btn-and-go-back .submit-btn:hover {
+    background-color: hsla(213, 96%, 18%, 0.791);
+}
+
+.btn-and-go-back .submit-btn:active {
+    transform: scale(0.95);
+}
+
+.go-back {
+    text-decoration: none;
+    cursor: pointer;
+    color: hsl(231, 11%, 63%);
+    font-weight: 700;
+    display: none;
+}
+
+.monthly-billing-plan {
+    /* border: 1px solid black; */
+    padding: 2rem;
+    display: none;
+}
+
+.yearly-billing-plan {
+    /* border: 1px solid black; */
+    padding: 2rem;
+    display: none;
+}
+
+
+.per-month-plans, .per-year-plans {
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.per-month-plans .monthly-plan-selection,
+ .per-year-plans .yearly-plan-selection {
+    border: 0.5px solid hsl(231, 11%, 63%);
+    padding: 1rem 2rem 1rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.per-month-plans .monthly-plan-selection .monthly-plan-name,
+.per-year-plans .yearly-plan-selection .yearly-plan-name {
+    margin-top: 2.5rem;
+    color: hsl(213, 96%, 18%);
+}
+
+.per-month-plans .monthly-plan-selection .monthly-plan-price,
+.per-year-plans .yearly-plan-selection .yearly-plan-price {
+    color: hsl(231, 11%, 63%);
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+.yearly-plan-selection .yearly-free-gift {
+    font-size: 10px;
+    margin-top: 10px;
+    font-weight: 500;
+    color: hsl(213, 96%, 18%);
+}
+
+
+.toggle-btn-bg {
+    /* border: 1px solid black; */
+    width: 100%;
+    margin-top: 30px;
+    border-radius: 19px;
+    background-color: hsl(217, 100%, 97%);
+    display: none;
+}
+
+.toggle-btn {
+    /* border: 1px solid sandybrown; */
+    display: flex;
+    width: max-content;
+    margin: auto;
+    margin-top: 20px;
+    align-items: center;
+    gap: 20px;
+}
+
+.toggle-btn .month {
+    color: hsl(213, 96%, 18%);
+}
+
+.toggle-btn .year {
+    color: hsl(231, 11%, 63%);
+}
+
+.toggled {
+    color: hsl(213, 96%, 18%);
+}
+
+.untoggled {
+    color: hsl(231, 11%, 63%);
+}
+
+.switch {
+    /* border: 1px solid blue; */
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    border-radius: 10px;
+}
+
+.switch input {
+    display: none;
+}
+
+.slider {
+    /* border: 1px solid sandybrown;s */
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: hsl(213, 96%, 18%);
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 20px;
+}
+
+.slider:before {
+    position: absolute;
+    content: '';
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 100%;
+}
+
+.switch input:checked + .slider {
+    background-color: hsl(213, 96%, 18%);
+}
+
+.switch input:focus + .slider {
+    box-shadow: 0 0 1px hsl(206, 94%, 87%);
+}
+
+.switch input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+.monthly-pick-ons {
+    /* border: 1px solid blueviolet; */
+    display: none;
+}
+
+.yearly-pick-ons {
+    /* border: 1px solid saddlebrown; */
+    display: none;
+}
+
+.checkbox-extras {
+    border: 0.5px solid grey;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.checkbox-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.checkbox-align {
+    display: flex;
+    gap: 13px;
+}
+
+.checkbox-info .checkbox-info-head {
+    color: hsl(213, 96%, 18%);
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.checkbox-info .checkbox-info-text {
+    color: hsl(231, 11%, 63%);
+    font-size: 12px;
+}
+
+.checkbox-extras .checkbox-extra-fee {
+    font-size: 13px;
+    color: hsl(243, 100%, 62%);
+}
+
+.monthly-finishing-up {
+    /* border: 1px solid saddlebrown; */
+    display: none;
+}
+
+.yearly-finishing-up {
+    display: none;
+}
+
+.selected-plan-review {
+    padding: 1rem;
+    background-color: hsl(231, 100%, 94%);
+    border-radius: 7px;
+}
+
+.selected-head {
+    /* border: 1px solid salmon; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.selected-head h5 {
+    color: hsl(213, 96%, 18%);
+    font-weight: 700;
+    font-size: 0.8rem;
+}
+
+.selected-head-selection .selected-plan {
+    color: hsl(213, 96%, 18%);
+    font-size: 0.85rem;
+}
+
+.selected-head-selection .change {
+    font-size: 0.7rem;
+    color: hsl(231, 11%, 63%);
+}
+
+.border {
+    border-bottom: 1px solid hsl(231, 11%, 63%);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.picked-plan {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.picked-plan .picked-plan-name {
+    color: hsl(231, 11%, 63%);
+    font-size: 0.9rem;
+}
+
+.picked-plan .picked-plan-price {
+    color: hsla(213, 94%, 27%, 0.997);
+    font-size: 0.8rem;
+}
+
+.total-price {
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.total-price .total-info {
+    color: hsl(231, 11%, 63%);
+    font-size: 0.9rem;
+}
+
+.total-price .total-fee {
+    font-weight: 700;
+    color: hsl(243, 100%, 62%);
+}
+
+.thank-you {
+    /* border: 1px solid blue; */
+    max-height: 50%;
+    margin-top: 100px;
+    display: none;
+}
+
+.thank-you-logo {
+    display: block;
+    margin: auto;
+}
+
+.thank-you-head {
+    width: max-content;
+    margin: auto;
+    color: hsla(213, 94%, 27%, 0.997);
+    margin-top: 30px;
+}
+
+.thank-you-info {
+    max-width: 50%;
+    margin: auto;
+    text-align: center;
+    color: hsl(231, 11%, 63%);
+    margin-top: 20px;
+}
+
+
+
+@media only screen and (max-width: 500px) {
+    .main-container {
+        flex-direction: column;
+        margin: 0;
+    }
+
+    body {
+        background-color: white;
+        padding: 0;
+    }
+
+    .steps-info {
+        display: none;
+    }
+
+
+    .selection {
+        background-image: url(./assets/images/bg-sidebar-mobile.svg);
+        min-width: 100vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .selection-display {
+        /* height: pa; */
+        /* padding-bottom: 50px; */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-width: 100%;
+        /* padding: 0; */
+    }
+
+}
