@@ -39,16 +39,41 @@ const proMonthlyPlan = document.querySelector('.js-monthly-plan-3');
 
 // Toggle button
 const toggleButton = document.querySelector('.js-toggle-btn');
-const toggle = document.getElementById("toggle");
-
+// const toggle = document.getElementById("toggle");
+// const btn = document.querySelector('.toggleButton');
 
 
 function pageTwoDisplay(month, year, monCo, yeCo) {
     month.style.display = 'none';
     year.style.display = 'block';
     monCo.style.color = 'hsl(231, 11%, 63%)';
-    yeCo.style.colr = 'hsl(213, 96%, 18%)';
+    yeCo.style.color = 'hsl(213, 96%, 18%)';
 }
+
+
+// const btn = document.querySelector('.toggleBtn');
+// btn.addEventListener('click', () => {
+//     toggleAction()
+// })
+
+function toggleAction() {
+    let div = document.querySelector('.toggleButton');
+    // document.querySelector('')
+    if (div.classList.contains("active")) {
+        monthlyBillingPlan.style.display = 'block';
+        yearlyBillingPlan.style.display = 'none';
+        monthColor.style.color = 'hsl(213, 96%, 18%)';
+        yearColor.style.color = 'hsl(231, 11%, 63%)';
+
+        div.classList.remove("active");
+    }else {
+        pageTwoDisplay(monthlyBillingPlan, yearlyBillingPlan, monthColor, yearColor);
+
+        div.classList.add("active");
+    }
+}
+
+
 
 
 function setErrorDisplay(error, message, inputElement) {
@@ -62,19 +87,19 @@ function clearErrorDisplay(error, inputElement) {
     inputElement.style.border = '1px solid hsl(217, 100%, 97%)';
 }
 
-let isToggled = false;
+// let isToggled = false;
 
-function toggleBtn() {
-    isToggled = !isToggled;
-    if (isToggled) {
-        pageTwoDisplay(monthlyBillingPlan, yearlyBillingPlan, monthColor, yearColor);
-    } else {
-        monthlyBillingPlan.style.display = 'block';
-        yearlyBillingPlan.style.display = 'none';
-        monthColor.style.color = 'hsl(213, 96%, 18%)';
-        yearColor.style.color = 'hsl(231, 11%, 63%)';
-    }
-}
+// function toggleBtn() {
+//     isToggled = !isToggled;
+//     if (isToggled) {
+//         pageTwoDisplay(monthlyBillingPlan, yearlyBillingPlan, monthColor, yearColor);
+//     } else {
+//         monthlyBillingPlan.style.display = 'block';
+//         yearlyBillingPlan.style.display = 'none';
+//         monthColor.style.color = 'hsl(213, 96%, 18%)';
+//         yearColor.style.color = 'hsl(231, 11%, 63%)';
+//     }
+// }
 
 
 
@@ -158,10 +183,12 @@ allButtons.forEach((button) => {
             toggleButton.style.display = 'block' ;
             nextPage.style.display = 'block';
 
-            toggle.addEventListener('change', () => {
-                toggleBtn();
-            });
 
+
+            document.getElementById('tog-btn').addEventListener('click', () => {
+                toggleAction()
+                
+            })
 
 
         } else {

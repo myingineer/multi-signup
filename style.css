@@ -228,9 +228,49 @@ body {
     color: hsl(213, 96%, 18%);
 }
 
-
 .toggle-btn-bg {
-    /* border: 1px solid black; */
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    border-radius: 19px;
+    background-color: hsl(217, 100%, 97%);
+    display: none;
+}
+
+.toggle-cover {
+    /* border: 1px solid brown; */
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.toggleButton {
+    width: 28px;
+    height: 28px;
+    background-color: white;
+    border-radius: 100%;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.25s ease-in-out;
+    margin: 5px;
+}
+
+.toggleButton.active {
+    background-color: brown;
+    left: 30px;
+}
+
+.toggle {
+    width: 70px;
+    padding: 2px;
+    background-color: hsl(213, 96%, 18%);
+    border-radius: 30px;
+}
+
+
+/* .toggle-btn-bg {
+    border: 1px solid black;
     width: 100%;
     margin-top: 30px;
     border-radius: 19px;
@@ -239,7 +279,7 @@ body {
 }
 
 .toggle-btn {
-    /* border: 1px solid sandybrown; */
+    border: 1px solid sandybrown;
     display: flex;
     width: max-content;
     margin: auto;
@@ -265,7 +305,7 @@ body {
 }
 
 .switch {
-    /* border: 1px solid blue; */
+    border: 1px solid blue;
     position: relative;
     display: inline-block;
     width: 60px;
@@ -278,7 +318,7 @@ body {
 }
 
 .slider {
-    /* border: 1px solid sandybrown;s */
+    border: 1px solid sandybrown;
     position: absolute;
     cursor: pointer;
     top: 0;
@@ -316,7 +356,7 @@ body {
     -webkit-transform: translateX(26px);
     -ms-transform: translateX(26px);
     transform: translateX(26px);
-}
+} */
 
 .monthly-pick-ons {
     /* border: 1px solid blueviolet; */
